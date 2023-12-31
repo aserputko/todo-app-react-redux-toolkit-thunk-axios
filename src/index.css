@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Icons */
+  .icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center, 50%, 50%;
+  }
+
+  .icon-sm {
+    width: 10px;
+    height: 10px;
+  }
+
+  .icon-lg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .icon-cross {
+    background-image: url('/images/icon-cross.svg');
+  }
+
+  .icon-check {
+    background-image: url('/images/icon-check.svg');
+  }
+
+  .icon-moon {
+    background-image: url('/images/icon-moon.svg');
+  }
+
+  .icon-sun {
+    background-image: url('/images/icon-sun.svg');
+  }
+
+  /* Images */
+  .hero-image-desktop-light {
+    background-image: url('/images/bg-desktop-light.jpg');
+  }
+
+  .hero-image-desktop-dark {
+    background-image: url('/images/bg-desktop-dark.jpg');
+  }
+
+  .hero-image-mobile-light {
+    background-image: url('/images/bg-mobile-light.jpg');
+  }
+
+  .hero-image-mobile-dark {
+    background-image: url('/images/bg-mobile-dark.jpg');
+  }
+
+  .hero-image {
+    @apply block bg-no-repeat bg-cover bg-center w-full absolute left-0 top-0 right-0 h-[200px] sm:h-[300px] hero-image-mobile-dark sm:hero-image-desktop-dark dark:hero-image-mobile-dark dark:sm:hero-image-desktop-dark;
+  }
+
+  /* Cards */
+  .card {
+    @apply flex px-5 py-4 sm:py-5 bg-white border border-white dark:bg-slate-800 dark:border-slate-800 rounded-md;
+  }
+}
